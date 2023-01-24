@@ -1,3 +1,36 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+table {
+  margin-bottom: 15px;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+
+.book-list {
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.book-title,
+.book-text{
+  margin-bottom: 10px;
+}

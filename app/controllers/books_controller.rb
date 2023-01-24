@@ -3,7 +3,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "Submitted successfully!"
-      #redirect_to book_path(@book.id)
+      redirect_to book_path(@book.id)
     else
       render :new
     end
@@ -13,11 +13,11 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-=begin
   def show
-    @list = List.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
+=begin
   def edit
     @list = List.find(params[:id])
   end
