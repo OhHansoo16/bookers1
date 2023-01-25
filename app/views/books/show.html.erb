@@ -16,6 +16,6 @@
       
       <p><strong>Body:</strong><%= @book.body %></p>
       
-      <p><a href="/books">Back</a></p>
+      <p><%=link_to "Edit", edit_book_path(@book.id) %> | <a href="/books">Back</a></p>
   </body>
 </html>
