@@ -8,13 +8,13 @@
     <title>Bookers1</title>
   </head>
   <body>
-      <div>
+      <div style="color: green">
          <%= flash[:notice] %>
       </div>
         
-      <p><strong>Title:</strong><%= @book.title %></p>
+      <p class="show-title"><strong>Title:</strong><%= @book.title %></p>
       
-      <p><strong>Body:</strong><%= @book.body %></p>
+      <p class="show-body"><strong>Body:</strong><%= @book.body %></p>
       
       <p><%=link_to "Edit", edit_book_path(@book.id) %> | <a href="/books">Back</a></p>
   </body>

@@ -1,2 +1,41 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ca2af0b360.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/stylesheet/books.scss" />
+    <title>Bookers1</title>
+  </head>
+  <body>
+  <h1 class="title">Editing Book</h1>
+  
+  <% if @book.errors.any? %>
+    <%= @book.errors.count %>error prohibited this book from being saved:
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= form_with model: @book do |f| %>
+
+  <div class="book-title">
+    <p>Title</p>
+    <%= f.text_field :title %>
+  </div>
+  <div class="book-text">
+    <p>body</p>
+    <%= f.text_area :body %><br>
+  </div>
+  
+  <div class="submit-bottun">
+      <%= f.submit 'Update Book' %>
+  </div>
+  
+  <% end %>
+  
+  <p><%=link_to "Show", book_path(@book.id) %> | <a href="/books">Back</a></p>
+  </body>
+</html>
